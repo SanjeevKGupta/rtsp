@@ -1,9 +1,46 @@
-## IBM Edge Application Manager (IEAM) - RTSP server 
+## IBM Edge Application Manager (IEAM) based RTSP Video Server 
 
 ### Introduction
+Provides a RTSP Video Server.
 
-RTSP server uses docker image from https://github.com/mpromonet/v4l2rtspserver
+### Pre-requisite 
 
+- Raspberry Pi (RPI 4 preferred. Works on RPI 3 as will but will notice lag)
+
+    - RPI camera 
+         - Connect RPI camera to RPI 
+         - Verify that it is working
+        
+    - USB camera    
+        - TODO
+        
+- NUC 
+    - TODO
+    
+### Quick register
+
+- Create a node_policy.json
+```
+{
+  "properties": [
+      { "name": "owner",  "value": "sg.edge" },
+      { "name": "rtsp", "value": true },
+      { "name": "openhorizon.allowPrivileged", "value": true }
+  ],
+  "constraints": [
+  ]
+}
+```
+- Register
+```
+hzn register --policy=node_policy.json 
+```
+
+### Credit
+
+This RTSP server uses docker image from https://github.com/mpromonet/v4l2rtspserver
+
+### Development
 #### Build, Publish and Use in a shared IEAM environment
 
 Using a shared single tenant instance creates several challenges when services, patterns and policies need to be published in a common exchange under one org structure without multiple developers clobbering over each other.
@@ -33,16 +70,11 @@ Enviornment variables EDGE_OWNER, EDGE_DEPLOY provide flexiblity for different d
     export EDGE_OWNER=<a-two-or-three-letter-distinctive-initial-of-your-name>  # sg.dev  
     export EDGE_DEPLOY=<deploy-target> # e.g: example.rtsp
 
-    export DOCKER_BASE=<docker-base> # e.g. Change this this your docker base 
-
     export HZN_ORG_ID=mycluster
     export HZN_EXCHANGE_USER_AUTH=iamapikey:<iam-api-key>
-    export HZN_EXCHANGE_NODE_AUTH="<UNIQUE-NODE-ANME>:<node-token>"
-
-    hzn exchange node create -n $HZN_EXCHANGE_NODE_AUTH
 
 ### Register node - RPI 4 B
 Use script to register node
 
-    ./node_register_app.sh -e ENV_DEV_RTSP -r -l
+    hzn register --policy=node_policy.json
 
