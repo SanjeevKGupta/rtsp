@@ -33,7 +33,6 @@ Provides an RTSP Video Server using Raspberry Pi .
 ```
 2. Setup ENVIRONMENT VARs   
 ```
-export EDGE_OWNER=sg.edge
 export HZN_ORG_ID=mycluster
 export HZN_EXCHANGE_USER_AUTH=iamapikey:<iam-api-key-provided-to-you-for-the-target-ieam-instance>
 ```
@@ -41,7 +40,10 @@ export HZN_EXCHANGE_USER_AUTH=iamapikey:<iam-api-key-provided-to-you-for-the-tar
 ```
 hzn register --policy=node_policy.json 
 ```
-
+4. Access at
+```
+rtsp://<ip-address-of-the-edge-node>:8554/rtsp
+```    
 ### Credit
 
 This RTSP server uses docker image from https://github.com/mpromonet/v4l2rtspserver
