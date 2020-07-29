@@ -1,7 +1,7 @@
 ## IBM Edge Application Manager (IEAM) based RTSP Video Server 
 
 ### Introduction
-Provides a RTSP Video Server.
+Provides a RTSP Video Server using Raspberry Pi .
 
 ### Pre-requisite 
 
