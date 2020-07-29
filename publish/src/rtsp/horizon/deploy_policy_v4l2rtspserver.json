@@ -1,0 +1,23 @@
+{
+    "label": "deploy-policy-rtsp-$ARCH",
+    "description": "A biz policy for rtsp on $ARCH",
+    "service": {
+	"name": "$EDGE_OWNER.$EDGE_DEPLOY.v4l2rtspserver",
+	"org": "$HZN_ORG_ID",
+	"arch": "$ARCH",
+	"serviceVersions": [
+	    {
+		"version": "1.0.0",
+		"priority":{}
+	    }
+	]
+    },
+    "properties": [
+    ],
+    "constraints": [
+	"owner == $EDGE_OWNER",
+	"rtsp == true"
+    ],
+    "userInput": [
+    ]
+}

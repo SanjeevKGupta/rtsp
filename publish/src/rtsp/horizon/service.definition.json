@@ -1,0 +1,31 @@
+{
+    "org": "$HZN_ORG_ID",
+    "label": "$SERVICE_NAME-$ARCH",
+    "url": "$SERVICE_NAME",
+    "version": "$SERVICE_VERSION",
+    "arch": "$ARCH",
+    "public": true,
+    "sharable": "singleton",
+    "requiredServices": [
+    ],
+    "userInput": [
+    ],
+    "deployment": {
+	"services": {
+	    "$SERVICE_NAME": {
+		"image": "mpromonet/v4l2rtspserver:latest-arm32v7",
+                "privileged": true,
+		"devices": [
+                    "/dev/video0:/dev/video0"
+                ],
+		"command": ["-u", "rtsp", "-H480", "-W640"],
+		"ports": [
+		    {
+			"HostPort":"8554:8554",
+			"HostIP":"0.0.0.0"
+		    }
+		]
+	    }
+	}
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "properties": [
+      { "name": "owner",  "value": "sg.edge" },
+      { "name": "rtsp", "value": true },
+      { "name": "openhorizon.allowPrivileged", "value": true }
+  ],
+  "constraints": [
+  ]
+}

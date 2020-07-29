@@ -1,0 +1,7 @@
+{
+    "MetadataVars": {
+        "IMAGE_NAME": "v4l2rtspserver",
+        "SERVICE_NAME": "$(EDGE_OWNER).$(EDGE_DEPLOY).v4l2rtspserver",
+        "SERVICE_VERSION": "1.0.0"
+    }
+}
