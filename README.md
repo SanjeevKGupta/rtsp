@@ -19,7 +19,7 @@ Provides a RTSP Video Server using Raspberry Pi .
     
 ### Quick register
 
-- Create a node_policy.json
+1. Create a `node_policy.json` file
 ```
 {
   "properties": [
@@ -31,7 +31,7 @@ Provides a RTSP Video Server using Raspberry Pi .
   ]
 }
 ```
-- Register
+2. Register
 ```
 hzn register --policy=node_policy.json 
 ```
