@@ -5,8 +5,8 @@ Provides a RTSP Video Server using Raspberry Pi .
 
 ### Pre-requisite 
 
-- `hzn` cli is installed on the target edge node and verified to be working.
-- Raspberry Pi (RPI 4 preferred. Works on RPI 3 as will but will notice lag)
+- `hzn` cli is installed on the target `edge node` and verified to be working.
+- Raspberry Pi (RPI 4 preferred. Works on RPI 3 as well but will notice lag.)
 
     - RPI camera 
          - RPI camera is connected to RPI and verified to be working.
@@ -30,6 +30,14 @@ Provides a RTSP Video Server using Raspberry Pi .
   "constraints": [
   ]
 }
+```
+
+3. Setup     
+```
+export EDGE_OWNER=sg.edge
+export EDGE_DEPLOY=example.rtsp
+export HZN_ORG_ID=mycluster
+export HZN_EXCHANGE_USER_AUTH=iamapikey:<iam-api-key-provided-to-you-for-the-target-ieam-instance>
 ```
 2. Register
 ```
