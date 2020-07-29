@@ -5,12 +5,12 @@ Provides a RTSP Video Server using Raspberry Pi .
 
 ### Pre-requisite 
 
+- `hzn` cli is installed on the target edge node and verified to be working.
 - Raspberry Pi (RPI 4 preferred. Works on RPI 3 as will but will notice lag)
 
     - RPI camera 
-         - Connect RPI camera to RPI 
-         - Verify that it is working
-        
+         - RPI camera is connected to RPI and verified to be working.
+
     - USB camera    
         - TODO
         
