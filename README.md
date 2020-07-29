@@ -31,16 +31,16 @@ Provides an RTSP Video Server using Raspberry Pi .
   ]
 }
 ```
-2. Setup ENVIRONMENT VARs   
+2. Setup ENVIRONMENT VARs 
 ```
 export HZN_ORG_ID=mycluster
 export HZN_EXCHANGE_USER_AUTH=iamapikey:<iam-api-key-provided-to-you-for-the-target-ieam-instance>
 ```
-3. Register
+3. Register edge ndoe with the node policy,
 ```
 hzn register --policy=node_policy.json 
 ```
-4. Access at
+4. Access the rtsp stream as
 ```
 rtsp://<ip-address-of-the-edge-node>:8554/rtsp
 ```    
