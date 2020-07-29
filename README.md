@@ -1,7 +1,7 @@
 ## IBM Edge Application Manager (IEAM) based RTSP Video Server 
 
 ### Introduction
-Provides a RTSP Video Server using Raspberry Pi .
+Provides an RTSP Video Server using Raspberry Pi .
 
 ### Pre-requisite 
 
@@ -31,15 +31,14 @@ Provides a RTSP Video Server using Raspberry Pi .
   ]
 }
 ```
-
-3. Setup     
+2. Setup ENVIRONMENT VARs   
 ```
 export EDGE_OWNER=sg.edge
 export EDGE_DEPLOY=example.rtsp
 export HZN_ORG_ID=mycluster
 export HZN_EXCHANGE_USER_AUTH=iamapikey:<iam-api-key-provided-to-you-for-the-target-ieam-instance>
 ```
-2. Register
+3. Register
 ```
 hzn register --policy=node_policy.json 
 ```
