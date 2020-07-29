@@ -23,10 +23,6 @@ Start with reviewing Makefile for targets.
 Build and publish images to docker and services to exchange. Can be executed again and again.
 
     make
-    
-Publish deploy-policy
-
-    make deploy-policy
 
 ### ENVIRONMENT variables
 
@@ -48,7 +44,5 @@ Enviornment variables EDGE_OWNER, EDGE_DEPLOY provide flexiblity for different d
 ### Register node - RPI 4 B
 Use script to register node
 
-policy
-
-    ./node_register_app.sh -e ENV_TFVISUAL_DEV -r -l
+    ./node_register_app.sh -e ENV_DEV_RTSP -r -l
 
