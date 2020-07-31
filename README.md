@@ -38,7 +38,7 @@ export HZN_EXCHANGE_USER_AUTH=iamapikey:<iam-api-key-provided-to-you-for-the-tar
 ```
 3. Register edge ndoe with the node policy,
 ```
-hzn register --policy=node_policy.json 
+hzn register --policy=node-policy.json 
 ```
 4. Access the rtsp stream as
 ```
